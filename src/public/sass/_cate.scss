@@ -1,0 +1,22 @@
+$cate-border: 1px solid #E1E1E1;
+.cates{
+	padding:0;
+	ul{
+		margin:0 50px 0 0;
+		li{
+			border: $cate-border;
+			border-top: none;
+			padding: 0 0 1px -22px;
+			cursor: pointer;
+			span{
+				margin-right: 30px;
+				padding: 13px;
+				border: $cate-border;
+				border-radius: 44px;
+			}
+		}
+		li:nth-child(1){
+			border-top: $cate-border;
+		}
+	}
+}

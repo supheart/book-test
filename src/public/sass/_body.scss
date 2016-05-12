@@ -1,0 +1,102 @@
+.banner{ 
+	position: relative; 
+	overflow: auto; 
+	ul{
+		li:nth-child(1) {
+			background: url("../images/banner-1.png");
+		}
+		li:nth-child(2) {
+			background: url("../images/banner-2.png");
+		}
+		li:nth-child(3) {
+			background: url("../images/banner-3.png");
+		}
+		li{
+			float: left;
+			a{
+				display: block;
+				height: 268px;
+			}
+		}
+	}
+	margin-bottom: 20px;
+}
+
+.gifts, .hots{
+	margin: 20px auto;
+	font-family: $font-yahei;
+	p{
+		padding-left: 15px;
+		font-size: 22px;
+		height: 36px;
+		background-color: #edeee9;
+	}
+}
+.gifts{
+	.row{
+		margin: 0;
+	}
+	li{
+		a{
+			padding: 10px 15px;
+			&:hover{
+				background-color: #E8E8E4;
+			}
+			img{
+				float: left;
+				width: 145px;
+				padding-right: 15px;
+			}
+			.title{
+				display: block;
+				font-size: 18px;
+				font-weight: bold;
+				padding: 10px 0;
+			}
+			span{
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+.hots{
+	li:nth-child(1){
+		background-image: url(../images/hots-2.png);
+	}
+	li:nth-child(2){
+		background-image: url(../images/hots-3.png);
+		padding-top: 30px;
+		.title{
+			color: #000;
+		}
+	}
+	li{
+		height: 268px;
+		a{
+			display: block;
+			margin-top:30px;
+			&:hover{
+				.title,span{
+					color: #23527C;
+				}
+			}
+		}
+		.title{
+			display: block;
+			font-size: 24px;
+			font-weight: bold;
+			padding: 20px 0;
+			color: #D56433;
+		}
+		span{
+			font-size: 17px;
+			line-height: 24px;
+			color: #000;
+		}
+	}
+}
+
+.content{
+	margin-top: 30px;
+}

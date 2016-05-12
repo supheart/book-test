@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="main_app">
+<head>
+	<meta charset="UTF-8">
+	<base href="/index">
+	<title><%=title%></title>
+	<link rel="stylesheet" href="/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/libs/unslider/css/unslider.css">
+	<link rel="stylesheet" href="/libs/unslider/css/unslider-dots.css">
+	<link rel="stylesheet" href="/css/buttons.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<script src="/libs/jquery-2.2.3/jquery-2.2.3.min.js"></script>
+	<script src="/libs/angular-1.5.5/angular.min.js"></script>
+	<script src="/js/angular-ui-router.js"></script>
+	<script src="/angular/app.js"></script>
+	<script src="/angular/app-config.js"></script>
+	<script src="/angular/app-load.js"></script>
+</head>
+<body class="container">
+	<header class="row">
+		<ul class="navhead">
+			<li class="logo"><a name="header" href="/"><img src="../images/logo.png" alt="多多书馆"></a></li>
+			<li class="navli">
+				<nav class="row">
+					<ul class="navtab">
+						<li><a href="/index">
+						<p class="title">书馆首页</p>
+						<p class="description">回到书馆的首页，这里作为游览的起点</p>
+						</a></li>
+						<li><a href="/cate">
+						<p class="title">内容分类</p>
+						<p class="description">this is a description for shop123213</p>
+						</a></li>
+						<li><a href="inst">
+						<p class="title">兴趣游廊</p>
+						<p class="description">this is a description for shop21312</p>
+						</a></li>
+						<li><a href="/comu">
+						<p class="title">书友相会</p>
+						<p class="description">this is a description for shop12312</p>
+						</a></li>
+					</ul>
+				</nav>
+			</li>
+		</ul>
+		<div class="col-sm-8"></div>
+		<div class="col-sm-4 search">
+			<button class="button button-raised"><i class="glyphicon glyphicon-search"></i></button>
+			<input id="kw" type="text" placeholder="Search for...">
+		</div>
+	</header>
+
+	<div class="content row">
+		<div data-ui-view></div>
+	</div>
+
+	<footer class="row">
+		<p class="col-sm-4 leftp">
+			欢迎光临多多书店<br>
+			衷心祝愿每一位读者幸福愉快<br>
+			致力于卖最好的书，学最好的知识<br>
+			希望大家多多支持
+		</p>
+		<p class="col-sm-4 middlep">
+			<img src="../images/logo.png" alt="多多书馆">
+		</p>
+		<p class="col-sm-4 rightp">
+			版权信息：版权归多多书店所有<br>
+			询问方式：supheart@163.com<br>
+			作者名称：<%=name%><br>
+			<a href="#header">返回页顶</a>
+		</p>
+	</footer>
+
+	<script src="/libs/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<script src="/libs/unslider/js/unslider-min.js"></script>
+	<script src="/js/layout.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.navtab a').each(function(){
+				var location_href = document.location.href;
+				//var current_href = $(this).context.href;
+				var current_href = $(this).context.pathname;
+				if(location_href.indexOf(current_href) > 0){
+					$(this).addClass('active');
+				}else{
+					$(this).addClass('normal');
+				}
+				//console.log(hrefval);
+			});
+
+			
+		});
+	</script>
+</body>
+</html>

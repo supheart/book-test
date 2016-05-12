@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test page</title>
+	<link rel="stylesheet" href="../libs/unslider/css/unslider.css">
+	<link rel="stylesheet" href="../libs/unslider/css/unslider-dots.css">
+	<script src="../libs/jquery-2.2.3/jquery-2.2.3.min.js"></script>
+	<script src="../libs/unslider/js/unslider.js"></script>
+	<style type="text/css">
+		.ban-slider {
+		  position: relative;
+		  overflow: auto; }
+		  .ban-slider li {
+		  	list-style: none; 
+		  }
+		  .ban-slider ul :nth-child(1) {
+		    background: url("../images/banner-1.png"); }
+		  .ban-slider ul :nth-child(2) {
+		    background: url("../images/banner-2.png"); }
+		  .ban-slider ul :nth-child(3) {
+		    background: url("../images/banner-3.png"); }
+		  .ban-slider ul li {
+		    height: 440px;
+		    float: left;}
+
+	</style>
+</head>
+<body>
+	<div class="ban-slider">
+		<ul>
+			<li>My slide</li>
+			<li>Another slide</li>
+			<li>My last slide</li>
+		</ul>
+	</div>
+	<script>
+		jQuery(document).ready(function($) {
+			$('.ban-slider').unslider({
+				dots: true
+			});
+		});
+	</script>
+</body>
+</html>
