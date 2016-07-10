@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var log4js = require('log4js');
@@ -23,11 +24,14 @@ app.use(session(commonutil.conf('session')));
 //-----end--配置express参数和中间件------
 
 //----start-设置日志处理------
-var logconf = commonutil.conf('log');
-log4js.configure(logconf);
+var logConf = commonutil.conf('log');
+if (!fs.existsSync(logConf.dirname)) {
+	fs.mkdirSync(logConf.dirname);
+}
+log4js.configure(logConf);
 logger = log4js.getLogger('normal');
 logger.setLevel('INFO');
-app.use(log4js.connectLogger(logger, {level: log4js.levels.INFO, format: logconf.logformat}));
+app.use(log4js.connectLogger(logger, {level: log4js.levels.INFO, format: logConf.logformat}));
 logger.info('start log..');
 //-----end--设置日志处理------
 

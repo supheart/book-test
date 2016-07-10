@@ -18,6 +18,7 @@ module.exports = {
 			},
 		],
 		replaceConsole: true,
+		dirname: __dirname + '/../../logs',
 		logformat: 'remote-addr(:remote-addr),method(:method),url(:url),http(HTTP/:http-version),state(:status),contentLength(:res[Content-Length]),responseTime(:response-time),referer(:referrer)',
 	},
 };
