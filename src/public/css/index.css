@@ -154,9 +154,52 @@ footer {
       padding: 0 0 1px -22px;
       cursor: pointer; }
       .cates ul li span {
-        margin-right: 30px;
-        padding: 13px;
+        margin: -1px 30px 1px 0;
+        line-height: 36px;
+        text-align: center;
         border: 1px solid #E1E1E1;
-        border-radius: 44px; }
+        width: 36px;
+        height: 36px;
+        border-radius: 50%; }
     .cates ul li:nth-child(1) {
       border-top: 1px solid #E1E1E1; }
+
+.cate-content {
+  margin: 0;
+  padding: 0; }
+  .cate-content .cate-banner {
+    padding: 0 0 30px 5px;
+    vertical-align: middle; }
+    .cate-content .cate-banner .cate-map {
+      font-weight: 500; }
+    .cate-content .cate-banner .cate-order-kw {
+      float: right;
+      margin-right: 10px; }
+      .cate-content .cate-banner .cate-order-kw input, .cate-content .cate-banner .cate-order-kw label {
+        cursor: pointer; }
+    .cate-content .cate-banner .cate-search input {
+      padding: 3px 8px;
+      float: right;
+      width: 220px;
+      height: 28px;
+      line-height: 28px;
+      background-color: #F4F3EF;
+      border: 1px solid #e1e1e1;
+      outline: 0 none !important; }
+    .cate-content .cate-banner .cate-search button {
+      float: right;
+      margin-right: 12px;
+      padding: 0 14px;
+      height: 28px; }
+  .cate-content .book-figure img {
+    width: 30px; }
+  .cate-content .book-figure figcaption {
+    position: relative; }
+    .cate-content .book-figure figcaption h2 {
+      position: absolute;
+      top: 5px;
+      left: 5px; }
+    .cate-content .book-figure figcaption p {
+      position: absolute;
+      top: 5px;
+      left: 205px; }
