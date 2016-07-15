@@ -191,15 +191,24 @@ footer {
       margin-right: 12px;
       padding: 0 14px;
       height: 28px; }
-  .cate-content .book-figure img {
-    width: 30px; }
-  .cate-content .book-figure figcaption {
-    position: relative; }
-    .cate-content .book-figure figcaption h2 {
-      position: absolute;
-      top: 5px;
-      left: 5px; }
-    .cate-content .book-figure figcaption p {
-      position: absolute;
-      top: 5px;
-      left: 205px; }
+  .cate-content .book-figure {
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    background-color: #E1E1E1; }
+    .cate-content .book-figure img {
+      width: 30px;
+      float: left; }
+    .cate-content .book-figure .title {
+      text-align: left;
+      width: 180px;
+      height: 100%;
+      padding: 0 10px;
+      font-size: 22px; }
+    .cate-content .book-figure .desc {
+      width: 100%;
+      height: 100%;
+      text-align: left; }
+    .cate-content .book-figure:hover {
+      background-color: #aaa;
+      padding: 5px; }
